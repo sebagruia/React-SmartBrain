@@ -1,0 +1,9 @@
+.logo-div{
+    text-align:center;
+}
+.logo-div img{
+    width:80px;
+}
+.logo-div .logoName{
+    font-family: 'Turret Road', cursive;
+}
