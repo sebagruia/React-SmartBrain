@@ -1,9 +1,17 @@
 .form-div{
+    display:flex;
+    width:100%;
+    padding-top: 5%;
     font-family: 'Turret Road', cursive;
-    width:60%;
     
 }
-
+.formBasic{
+    width:50%;
+}
 .form-label{
     color:#e3f2fd;
+}
+.detect-button{
+    width:100px;
+
 }
