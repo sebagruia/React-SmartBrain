@@ -6,7 +6,7 @@ import SmartBrain from './SmartBrain.png';
 
 const Navigation = ()=>{
     return(
-        <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor:"#e3f2fd"}}>
+        <nav className="navbar navbar-expand-lg navbar-light sticky-top" style={{backgroundColor:"#e3f2fd"}}>
                 <a className="navbar-brand" href="#home">
                     <Tilt className="Tilt" options={{max:35}} style={{ height: 110, width: 110 }} >
                         <div className="logo-div Tilt-inner">
