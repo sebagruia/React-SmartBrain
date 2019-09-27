@@ -51,7 +51,7 @@ div.foo{
     z-index: 3;
     transform:
       rotateX(0deg)
-      rotateY(-15deg)
+      rotateY(-45deg)
       rotateZ(0deg);
   }
   .letter:after{
@@ -68,7 +68,7 @@ div.foo{
     color: #fafafa;
     transform:
       rotateX(0deg)
-      rotateY(-60deg)
+      rotateY(-90deg)
       rotateZ(0deg);
   }
   .letter:hover:after{
@@ -90,3 +90,25 @@ div.foo{
 .number{
   display:block!important;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:320px){
+  .letter{
+    font-size:1.2em;
+  }
+
+}
+@media screen and (min-width:400px){
+  .letter{
+    font-size:1.6em;
+  }
+
+}
+@media screen and (min-width: 500px){
+  .letter {
+    font-size: 1.8em;
+}
+}
+
+

@@ -9,9 +9,34 @@
     width:50%;
 }
 .form-label{
+    text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    3px 0px 1px rgba(0,0,0,.8);
     color:#e3f2fd;
 }
 .detect-button{
     width:100px;
 
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:320px){
+    .formBasic {
+        width: 90%;
+        font-size: 0.8em;
+    }
+
+    .detect-button {
+        width: 80px;
+    }
+
+
+}
+
+@media screen and (min-width:800px){
+    .formBasic {
+        width: 70%;
+        font-size: 1em;
+    }
 }

@@ -34,11 +34,28 @@ const particleOptions ={
 
 
 class App extends Component {
+  constructor(){
+      super();
+      this.state = {
+
+  }
+}
+
+  widthWindowDetection(){
+    let innerWidthValue = window.innerWidth;
+    console.log(innerWidthValue);
+    if(innerWidthValue<450){
+     particleOptions.particles.number.value=50;
+     
+    }
+  }
+
   render(){
+    this.widthWindowDetection();
     return (
       <div className="App">
         <Particles className="particles"
-              params={particleOptions} 
+              params={particleOptions }
         />
         <Navigation />
         <Rank />
