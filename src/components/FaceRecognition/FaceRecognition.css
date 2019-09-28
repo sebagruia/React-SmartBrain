@@ -1,8 +1,17 @@
 .img-container{
-    width:300px;
+    position:relative;
+    width:500px;
     height:auto;
     padding-bottom:2%;
 }
 .image-to-analyze{
     width:100%;
+}
+.bounding-box{
+    position: absolute;
+    box-shadow: 0 0 0 3px #149df2 inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
 }
