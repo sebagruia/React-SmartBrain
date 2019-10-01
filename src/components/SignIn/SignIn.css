@@ -1,0 +1,19 @@
+.card-container{
+    max-width: 25em;
+    background-color: transparent!important;
+    box-shadow: 5px 10px 8px #343a4075;
+}
+.label{
+    text-shadow: none;
+    /* color:#ffffff; */
+}
+.form-buttons{
+    margin-right:2em;
+}
+.button-wrapper{
+    text-align:center;
+}
+
+.register-button{
+    color:#fff!important;
+}

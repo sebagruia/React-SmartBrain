@@ -1,9 +1,26 @@
+
+.navbar{
+    font-family: 'Turret Road', cursive;
+}
 .logo-div{
     text-align:center;
 }
 .logo-div img{
     width:80px;
 }
-.logo-div .logoName{
-    font-family: 'Turret Road', cursive;
+
+.navbar{
+    margin-bottom: 5%;
+}
+.buttons-margin{
+    margin-right:20px!important;
+}
+
+.font-family-custom{
+    font-family: 'Turret Road', cursive!important;
+    font-weight: 700;
+
+}
+.my-button:hover{
+    color: rgba(0,0,0,.9)!important;
 }
