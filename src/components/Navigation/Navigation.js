@@ -16,7 +16,6 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                             <p className="logoName">SmartBrain</p>
                         </div>
                     </Tilt>
-
                 </a>
                 <button className="navbar-toggler text-secondary" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -25,7 +24,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto ">
                         <li className="nav-item ">
-                            <Button onClick={() => onRouteChange('SignOut')} className="my-button  text-secondary" variant="link" ><i className="fas fa-sign-out-alt "><span className="font-family-custom">Sign out</span></i></Button>
+                            <Button onClick={() => onRouteChange('SignIn')} className="my-button  text-secondary" variant="link" ><i className="fas fa-sign-out-alt "><span className="font-family-custom">Sign out</span></i></Button>
                         </li>
                     </ul>
                 </div>
@@ -42,7 +41,6 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                             <p className="logoName">SmartBrain</p>
                         </div>
                     </Tilt>
-
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

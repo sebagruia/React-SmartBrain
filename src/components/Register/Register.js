@@ -27,7 +27,7 @@ const Register = ({onRouteChange})=>{
             <Form.Label className="label">Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Button onClick={()=>onRouteChange('Register')} variant="primary"  className="form-buttons" type="submit">Register</Button>
+            <Button onClick={()=>onRouteChange('home')} variant="primary"  className="form-buttons" type="submit">Register</Button>
         </Form>
     </Card.Body>
   </Card>

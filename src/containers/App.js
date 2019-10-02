@@ -60,7 +60,7 @@ class App extends Component {
 }
 
   onRouteChange= (route)=>{
-    if(route==='SignOut'){
+    if(route==='SignIn'){
       this.setState({isSignedIn:false});
     } 
     else if(route==='home'){
@@ -123,21 +123,20 @@ class App extends Component {
 
 
   render(){
+   const {isSignedIn, imageUrl, route, box} = this.state;
     this.widthWindowDetection();
-    
-  
     return (
       <div className="App">
         <Particles className="particles"
               params={particleOptions }
         />
-        <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn} />
+        <Navigation onRouteChange={this.onRouteChange} isSignedIn={isSignedIn} />
         
-        {this.state.route==='home'? 
+        {route==='home'? 
             <div>
                 <Rank />
                 <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
-                <FaceRecognition imageUrl={this.state.imageUrl} box={this.state.box}/> 
+                <FaceRecognition imageUrl={imageUrl} box={box}/> 
             </div> 
             : (this.state.route==="SignIn"
                 ? <SignIn onRouteChange={this.onRouteChange}/> 
