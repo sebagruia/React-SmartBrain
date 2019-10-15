@@ -33,14 +33,13 @@ class Register extends React.Component {
       body: JSON.stringify({
         name: this.state.name,
         email: this.state.email,
-        password: this.password
+        password: this.state.password
       })
     })
       .then(response => response.json())
       .then(user => {
         if (user) {
           this.props.loadUser(user);
-          console.log(user);
           this.props.onRouteChange('home');
         }
       });

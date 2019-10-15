@@ -37,13 +37,13 @@ class SignIn extends React.Component {
         if(user.id){
           this.props.loadUser(user);
           this.props.onRouteChange('home');
+        }else{
+          window.alert("No such User!!!");
         }
       });
-      // this.props.onRouteChange('home');
   }
 
   render(){
-    // this.componentDidMount
     const {onRouteChange} = this.props;
     return (
       <Card className="card-container m-auto" text="light">
