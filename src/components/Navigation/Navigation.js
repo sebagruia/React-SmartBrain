@@ -5,7 +5,7 @@ import './Navigation.css';
 import SmartBrain from './SmartBrain.png';
 
 const Navigation = ({ onRouteChange, isSignedIn }) => {
-
+    
     if (isSignedIn) {
         return (
             <nav className="navbar navbar-expand-lg navbar-light sticky-top" style={{ backgroundColor: "#e3f2fd" }}>
@@ -24,7 +24,9 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto ">
                         <li className="nav-item ">
-                            <Button onClick={() => onRouteChange('SignIn')} className="my-button  text-secondary" variant="link" ><i className="fas fa-sign-out-alt "><span className="font-family-custom">Sign out</span></i></Button>
+                            <Button onClick={() => {
+                                 onRouteChange('SignIn')}}  
+                                className="my-button  text-secondary" variant="link" ><i className="fas fa-sign-out-alt "><span className="font-family-custom">Sign out</span></i></Button>
                         </li>
                     </ul>
                 </div>

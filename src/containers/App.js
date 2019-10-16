@@ -42,28 +42,28 @@ const particleOptions = {
   "retina_detect": true
 };
 
+const initialState ={
+  input: '',
+  imageUrl: '',
+  box: [],
+  route: 'SignIn',
+  isSignedIn: false,
+  user: {
+    id: '',
+    name: '',
+    email: '',
+    entries: 0,
+    joined: ''
+  }
 
+}
 
 
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: [],
-      route: 'SignIn',
-      isSignedIn: false,
-      user: {
-        id: '',
-        name: '',
-        email: '',
-        entries: 0,
-        joined: ''
-      }
-
-    }
+    this.state = initialState;
   }
 
   loadUser = (data) => {
@@ -80,7 +80,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'SignIn') {
-      this.setState({ isSignedIn: false });
+      this.setState(initialState);
     }
     else if (route === 'home') {
       this.setState({ isSignedIn: true });
@@ -148,13 +148,12 @@ class App extends Component {
                                                                                     //with the source OBJECT ({entries:countDAta}) otherwise the whole object will have beed overwritten with
                                                                                     //{user: {entries:countData}}
             })
+            .catch(err=>console.log(`This is the problem ${err}`));
         }
         this.displayBoxOnImage(this.calculateFaceLocation(response));
       })
       .catch(err => { console.log(`HEYYYYY there is an ERROR - ${err}`) });
   }
-
-
 
 
   render() {

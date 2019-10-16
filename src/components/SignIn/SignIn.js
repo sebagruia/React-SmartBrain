@@ -21,6 +21,7 @@ class SignIn extends React.Component {
     this.setState({signInPassword:event.target.value});
   }
 
+  
   onSignInButton = (event)=>{
     event.preventDefault()
       fetch('http://localhost:3000/signIn', {
@@ -32,7 +33,6 @@ class SignIn extends React.Component {
         })
       })
       .then(response=>response.json())
-      // .then(data=>console.log(data));
       .then(user=>{
         if(user.id){
           this.props.loadUser(user);
