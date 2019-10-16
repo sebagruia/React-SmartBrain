@@ -52,7 +52,7 @@ class SignIn extends React.Component {
           <Form>
               <Form.Group controlId="formBasicEmail">
               <Form.Label className="label">Email address</Form.Label>
-              <Form.Control onChange = {this.onEmailChange} type="email" placeholder="Enter email" />
+              <Form.Control onChange = {this.onEmailChange} type="email" placeholder="Enter email" required />
               <Form.Text className="light" >
                   Don't worry I won't share your email, I'm not that guy.
               </Form.Text>
@@ -60,7 +60,7 @@ class SignIn extends React.Component {
           
               <Form.Group controlId="formBasicPassword">
               <Form.Label className="label">Password</Form.Label>
-              <Form.Control onChange = {this.onPasswordChange} type="password" placeholder="Password" />
+              <Form.Control onChange = {this.onPasswordChange} type="password" placeholder="Password" required/>
               </Form.Group>
               <div className="button-wrapper">
                 <Button onClick={this.onSignInButton} className="form-buttons" variant="primary" type="submit">Sign In</Button>

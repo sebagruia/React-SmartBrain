@@ -38,7 +38,7 @@ class Register extends React.Component {
     })
       .then(response => response.json())
       .then(user => {
-        if (user) {
+        if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
         }
@@ -53,12 +53,12 @@ class Register extends React.Component {
           <Form>
             <Form.Group controlId="formBasicName">
               <Form.Label className="label">Name</Form.Label>
-              <Form.Control onChange={this.onNameInput} type="text" placeholder="Enter Name" />
+              <Form.Control onChange={this.onNameInput} type="text" placeholder="Enter Name" required/>
             </Form.Group>
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label className="label">Email address</Form.Label>
-              <Form.Control onChange={this.onEmailInput} type="email" placeholder="Enter email" />
+              <Form.Control onChange={this.onEmailInput} type="email" placeholder="Enter email" required/>
               <Form.Text className="light" >
                 Don't worry I won't share your email, I'm not that guy.
             </Form.Text>
@@ -66,7 +66,7 @@ class Register extends React.Component {
 
             <Form.Group controlId="formBasicPassword">
               <Form.Label className="label">Password</Form.Label>
-              <Form.Control onChange={this.onPasswordInput} type="password" placeholder="Password" />
+              <Form.Control onChange={this.onPasswordInput} type="password" placeholder="Password" required/>
             </Form.Group>
             <Button onClick={this.onRegisterButton} variant="primary" className="form-buttons" type="submit">Register</Button>
           </Form>

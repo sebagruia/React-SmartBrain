@@ -7,13 +7,6 @@ import Rank from '../components/Rank/Rank';
 import SignIn from '../components/SignIn/SignIn';
 import Register from '../components/Register/Register';
 import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
-
-
-const app = new Clarifai.App({
-  apiKey: 'e7d73ad0648d404798bafcb6651ca693'
-});
-
 
 const particleOptions = {
   "particles": {
@@ -130,7 +123,15 @@ class App extends Component {
 
   onDetectButton = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+    fetch('http://localhost:3000/imageUrl', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        input: this.state.input
+      })
+
+    })
+      .then(response=>response.json()) // because it's a Fetch we have to converting it to json
       .then(response => {
         if (response) {
           fetch('http://localhost:3000/image', {

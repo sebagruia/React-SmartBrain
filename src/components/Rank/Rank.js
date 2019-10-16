@@ -2,7 +2,11 @@ import React from 'react';
 import './Rank.css';
 
 const Rank =({name, entries})=>{
-    const letterArray = name.split('');
+    let letterArray=[];
+    if(name){
+        letterArray = name.split('');
+    }
+   
 
     return(
         <div className="rank-text-container m-auto">
