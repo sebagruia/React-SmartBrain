@@ -1,6 +1,22 @@
+# SmartBrain
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 - [Project Link On GitHub Pages](https://sebagruia.github.io/React-SmartBrain/)
+
+
+## About The Project
+
+This application it's using the Clarifai API to recongize faces in pictures submited to the app by users.
+
+
+## How it Works
+
+To be able to use the App you have to register, after you are registered you are redirected to the main page 
+where you can paste the link to the picture you want to be anlysed.
+The App supports only pictures in JPEG, PNG, TIFF, BMP, GIF, WEBP format.
+
+
 
 ## Available Scripts
 
