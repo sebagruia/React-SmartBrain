@@ -105,7 +105,7 @@ div.foo{
   }
 
 }
-@media screen and (min-width: 500px){
+@media screen and (min-width: 600px){
   .letter {
     font-size: 1.8em;
 }
