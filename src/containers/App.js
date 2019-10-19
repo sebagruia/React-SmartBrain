@@ -123,37 +123,45 @@ class App extends Component {
 
   onDetectButton = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch('https://powerful-scrubland-05532.herokuapp.com/imageUrl', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        input: this.state.input
+    if(this.state.input!==''){
+      fetch('https://powerful-scrubland-05532.herokuapp.com/imageUrl', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          input: this.state.input
+        })
+  
       })
-
-    })
-      .then(response=>response.json()) // because it's a Fetch we have to converting it to json
-      .then(response => {
-        if (response) {
-          fetch(' https://powerful-scrubland-05532.herokuapp.com/image', {
-            method: 'put',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              id: this.state.user.id
+        .then(response=>response.json()) // because it's a Fetch we have to converting it to json
+        .then(response => {
+          if (response) {
+            fetch(' https://powerful-scrubland-05532.herokuapp.com/image', {
+              method: 'put',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                id: this.state.user.id
+              })
+  
             })
+              .then(response => response.json())
+              .then(countData => {
+                // this.setState({user:{entries:countData}}); //<-- This solution is not working 
+                this.setState(Object.assign(this.state.user, {entries:countData})); // This Object.assign updates the target OBJECT (this.state.user) 
+                                                                                      //with the source OBJECT ({entries:countDAta}) otherwise the whole object will have beed overwritten with
+                                                                                      //{user: {entries:countData}}
+              })
+              .catch(err=>console.log(`This is the problem ${err}`));
+          }
+          this.displayBoxOnImage(this.calculateFaceLocation(response));
+        })
+        .catch(err => { console.log(`HEYYYYY there is an ERROR - ${err}`) });
 
-          })
-            .then(response => response.json())
-            .then(countData => {
-              // this.setState({user:{entries:countData}}); //<-- This solution is not working 
-              this.setState(Object.assign(this.state.user, {entries:countData})); // This Object.assign updates the target OBJECT (this.state.user) 
-                                                                                    //with the source OBJECT ({entries:countDAta}) otherwise the whole object will have beed overwritten with
-                                                                                    //{user: {entries:countData}}
-            })
-            .catch(err=>console.log(`This is the problem ${err}`));
-        }
-        this.displayBoxOnImage(this.calculateFaceLocation(response));
-      })
-      .catch(err => { console.log(`HEYYYYY there is an ERROR - ${err}`) });
+
+    }
+    else{
+      window.alert('Please insert a link to your picture');
+    }
+   
   }
 
 
