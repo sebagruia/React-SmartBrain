@@ -8,7 +8,7 @@ const ImageLinkForm = ({onInputChange, onDetectButton})=>{
     return(
         <Form className="form-div  justify-content-center">
             <Form.Group className="formBasic">
-                <Form.Label className="form-label">SmartBrain will detect faces in your pictures</Form.Label>
+                <Form.Label className="form-label">SmartBrain will detect faces in your pictures --- Enter the link to an image below</Form.Label>
                 <InputGroup className="mb-3">
                     <InputGroup.Prepend>
                         <Button className="detect-button" variant="light" onClick={onDetectButton}>Detect</Button>
