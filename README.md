@@ -12,7 +12,7 @@ This application it's using the Clarifai API to recognize faces in pictures subm
 
 ## How it Works
 
-To be able to use the App you have to register after you are registered you are redirected to the main page where you can paste the link to the picture you want to be analyzed. The App supports only pictures in JPEG, PNG, TIFF, BMP, GIF, WEBP format.
+To be able to use the App you have to register. After you are registered you are redirected to the main page where you can paste the link to the picture you want to be analyzed. The App supports only pictures in JPEG, PNG, TIFF, BMP, GIF, WEBP format.
 
 
 
