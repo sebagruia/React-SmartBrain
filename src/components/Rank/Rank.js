@@ -22,6 +22,7 @@ const Rank =({name, entries})=>{
                 </div>
                 
                 <div className="your">
+                    <span className="letter" data-letter="-">-</span>
                     <span className="letter" data-letter="Y">Y</span>
                     <span className="letter" data-letter="O">O</span>
                     <span className="letter" data-letter="U">U</span>
